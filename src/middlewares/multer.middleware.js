@@ -10,6 +10,14 @@ const storage = multer.diskStorage({
     cb(null, file.originalname);
   },
 });
+
+
 const upload = multer({ storage });
+
+
+// const multerMiddleware = upload.fields([
+//   {name : "avatar", maxCount : 1},
+//   {name : "coverImage", maxCount: 1}
+// ])
 
 export { upload };
